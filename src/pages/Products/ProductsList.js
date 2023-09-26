@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useTitle } from "../../hooks/useTitle";
 
 import { ProductCard } from "../../components";
@@ -7,7 +8,6 @@ import { FilterBar } from "./components/FilterBar";
 
 import { useFilter } from "../../context";
 import { getProductsList } from "../../services";
-import { toast } from "react-toastify";
 
 export const ProductsList = () => {
   const { products, initialProductList } = useFilter();
